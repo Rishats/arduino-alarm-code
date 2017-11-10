@@ -1,4 +1,5 @@
-int sensorPin = 7; 
+int sensorPin = 7;
+int buzzerPin = 6;
 
 void setup()
 {
@@ -19,5 +20,13 @@ void loop()
  // now print out the temperature
  int temperatureC = (voltage - 0.5) * 100 ;  
  Serial.println(temperatureC);
+ if(temperatureC <= 25)
+ {
+   
+ }
+ else if(temperatureC > 27)
+ {
+   tone(buzzerPin, 1000, 500);
+ }
  delay(1000);                                     //waiting a second
 }

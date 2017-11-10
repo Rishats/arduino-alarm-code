@@ -1,16 +1,24 @@
-int sensorPin = 0; 
+int sensorPin = 0;
+int speakerPin = 2;
 
 void setup()
 {
+  pinMode (speakerPin, OUTPUT);
   Serial.begin(115200);  
                        
 }
  
 void loop()                     
 {
-
- 
+ if(analogRead(sensorPin) <= 200)
+ {
+   analogWrite (speakerPin, 0);
+ }
+ else if(analogRead(sensorPin) > 200)
+ {
+   analogWrite (speakerPin, 255);
+ }
  Serial.println(analogRead(sensorPin));
- delay(150);                                     //waiting a second
+ delay(5);                                     //waiting a second
 }
 
