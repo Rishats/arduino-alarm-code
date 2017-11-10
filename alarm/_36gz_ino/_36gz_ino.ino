@@ -1,6 +1,4 @@
-
-int sensorPin = 0; 
-int Gas = 1;
+int sensorPin = 7; 
 
 void setup()
 {
@@ -21,6 +19,5 @@ void loop()
  // now print out the temperature
  int temperatureC = (voltage - 0.5) * 100 ;  
  Serial.println(temperatureC);
- Serial.println(analogRead(Gas));
  delay(1000);                                     //waiting a second
 }
