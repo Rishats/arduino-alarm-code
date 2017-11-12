@@ -19,6 +19,6 @@ void loop()
    analogWrite (speakerPin, 255);
  }
  Serial.println(analogRead(sensorPin));
- delay(5);                                     //waiting a second
+ delay(1000);                                     //waiting a second
 }
 

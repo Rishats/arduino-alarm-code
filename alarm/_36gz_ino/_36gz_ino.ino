@@ -20,11 +20,11 @@ void loop()
  // now print out the temperature
  int temperatureC = (voltage - 0.5) * 100 ;  
  Serial.println(temperatureC);
- if(temperatureC <= 25)
+ if(temperatureC <= 30)
  {
    
  }
- else if(temperatureC > 27)
+ else if(temperatureC > 31)
  {
    tone(buzzerPin, 1000, 500);
  }
